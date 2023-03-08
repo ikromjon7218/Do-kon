@@ -4,14 +4,18 @@ from .views import *
 urlpatterns = [
     path('', HomeView.as_view()),
     path('product/', MahsulotView.as_view()),
-    path('detail_product/', Detail_ProductView.as_view()),
-    path('category/', CategoryView.as_view()),
+    path('detail_product/<int:son>/', Detail_ProductView.as_view()),
+    path('bolimlar/', CategoryView.as_view()),
     path('header/', HeaderView.as_view()),
-    path('ichki/', IchkiView.as_view()),
+    path('bolim/<int:son>/', Bolim_ProductsView.as_view()),
+
+
+
+
     path('blank_starter/', Blank_StarterView.as_view()),
     path('components/', ComponentsView.as_view()),
     path('content/', ContentView.as_view()),
-    path('listing_grid/', Listing_GridView.as_view()),
+
     path('listing_large/', Listing_LargeView.as_view()),
     path('offers/', OffersView.as_view()),
     path('payment/', PaymentView.as_view()),
