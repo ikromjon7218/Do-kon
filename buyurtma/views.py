@@ -46,5 +46,5 @@ class BuyurtmaView(View):
 
 class TanlanganView(View):
     def get(self, request):
-        data = {'tanlanganlar': Tanlangan.objects.all()}
+        data = {'tanlanganlar': Tanlangan.objects.filter(user=request.user)}
         return render(request, 'page-profile-wishlist.html', data)
